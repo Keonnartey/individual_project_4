@@ -1,3 +1,8 @@
+# Databricks notebook source
+!pip install -r requirements.txt
+
+# COMMAND ----------
+
 import requests
 from dotenv import load_dotenv
 import os
@@ -8,8 +13,6 @@ import base64
 load_dotenv()
 server_h = os.getenv("SERVER_HOSTNAME")
 access_token = os.getenv("ACCESS_TOKEN")
-
-print(server_h)
 FILESTORE_PATH = "dbfs:/FileStore/databricks_project"
 headers = {'Authorization': 'Bearer %s' % access_token}
 url = "https://"+server_h+"/api/2.0"
