@@ -11,55 +11,56 @@ access_token = os.getenv("ACCESS_TOKEN")
 
 print(server_h)
 FILESTORE_PATH = "dbfs:/FileStore/databricks_project"
-headers = {'Authorization': 'Bearer %s' % access_token}
-url = "https://"+server_h+"/api/2.0"
+headers = {"Authorization": "Bearer %s" % access_token}
+url = "https://" + server_h + "/api/2.0"
 
 
 def perform_query(path, headers, data={}):
     session = requests.Session()
-    resp = session.request('POST', url + path, 
-                           data=json.dumps(data), 
-                           verify=True, 
-                           headers=headers)
+    resp = session.request(
+        "POST", url + path, data=json.dumps(data), verify=True, headers=headers
+    )
     return resp.json()
 
 
 def mkdirs(path, headers):
     _data = {}
-    _data['path'] = path
-    return perform_query('/dbfs/mkdirs', headers=headers, data=_data)
-  
+    _data["path"] = path
+    return perform_query("/dbfs/mkdirs", headers=headers, data=_data)
+
 
 def create(path, overwrite, headers):
     _data = {}
-    _data['path'] = path
-    _data['overwrite'] = overwrite
-    return perform_query('/dbfs/create', headers=headers, data=_data)
+    _data["path"] = path
+    _data["overwrite"] = overwrite
+    return perform_query("/dbfs/create", headers=headers, data=_data)
 
 
 def add_block(handle, data, headers):
     _data = {}
-    _data['handle'] = handle
-    _data['data'] = data
-    return perform_query('/dbfs/add-block', headers=headers, data=_data)
+    _data["handle"] = handle
+    _data["data"] = data
+    return perform_query("/dbfs/add-block", headers=headers, data=_data)
 
 
 def close(handle, headers):
     _data = {}
-    _data['handle'] = handle
-    return perform_query('/dbfs/close', headers=headers, data=_data)
+    _data["handle"] = handle
+    return perform_query("/dbfs/close", headers=headers, data=_data)
 
 
 def put_file_from_url(url, dbfs_path, overwrite, headers):
     response = requests.get(url)
     if response.status_code == 200:
         content = response.content
-        handle = create(dbfs_path, overwrite, headers=headers)['handle']
+        handle = create(dbfs_path, overwrite, headers=headers)["handle"]
         print("Putting file: " + dbfs_path)
         for i in range(0, len(content), 2**20):
-            add_block(handle, 
-                      base64.standard_b64encode(content[i:i+2**20]).decode(), 
-                      headers=headers)
+            add_block(
+                handle,
+                base64.standard_b64encode(content[i : i + 2**20]).decode(),
+                headers=headers,
+            )
         close(handle, headers=headers)
         print(f"File {dbfs_path} uploaded successfully.")
     else:
@@ -70,7 +71,7 @@ def extract(
     url="https://gist.githubusercontent.com/rioto9858/ff72b72b3bf5754d29dd1ebf898fc893/raw/1164a139a780b0826faef36c865da65f2d3573e0/top50MusicFrom2010-2019.csv",
     file_path=FILESTORE_PATH + "/top50MusicFrom2010-2019.csv",
     directory=FILESTORE_PATH,
-    overwrite=True
+    overwrite=True,
 ):
     """Extract a url to a file path"""
     # Make the directory, no need to check if it exists or not
@@ -83,4 +84,3 @@ def extract(
 
 if __name__ == "__main__":
     extract()
-
