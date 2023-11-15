@@ -1,3 +1,5 @@
+export PYTHONDONTWRITEBYTECODE=1
+
 install:
 	pip install --upgrade pip && pip install -r requirements.txt
 
