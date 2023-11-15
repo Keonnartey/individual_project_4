@@ -55,7 +55,8 @@ def simple_plot(df):
     plt.ylabel("Frequency")
     plt.title("Distribution of Songs by Year (Rihanna)")
     plt.grid(axis="y", linestyle="--", alpha=0.7)
-    plt.savefig("histogram_plot.png") 
+
+    plt.savefig("histogram_plot.png")
     plt.show()
 
 

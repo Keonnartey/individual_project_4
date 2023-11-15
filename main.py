@@ -5,7 +5,7 @@ Main cli or app entry point
 from mylib.extract import extract
 from mylib.transform import load
 from mylib.query_viz import query_transform, simple_plot
-import os 
+import os
 
 
 if __name__ == "__main__":
