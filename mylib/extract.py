@@ -67,22 +67,20 @@ def put_file_from_url(url, dbfs_path, overwrite, headers):
 
 
 def extract(
-        url="""https://github.com/fivethirtyeight/data/blob/master/tennis-time/serve_times.csv?raw=true""",
-        url2="""https://github.com/fivethirtyeight/data/blob/master/tennis-time/events_time.csv?raw=true""",
-        file_path=FILESTORE_PATH+"/serve_times.csv",
-        file_path2=FILESTORE_PATH+"/event_times.csv",
-        directory=FILESTORE_PATH,
-        overwrite=True
+    url="https://gist.githubusercontent.com/rioto9858/ff72b72b3bf5754d29dd1ebf898fc893/raw/1164a139a780b0826faef36c865da65f2d3573e0/top50MusicFrom2010-2019.csv",
+    file_path=FILESTORE_PATH + "/top50MusicFrom2010-2019.csv",
+    directory=FILESTORE_PATH,
+    overwrite=True
 ):
     """Extract a url to a file path"""
     # Make the directory, no need to check if it exists or not
     mkdirs(path=directory, headers=headers)
-    # Add the csv files, no need to check if it exists or not
+    # Add the CSV file, no need to check if it exists or not
     put_file_from_url(url, file_path, overwrite, headers=headers)
-    put_file_from_url(url2, file_path2, overwrite, headers=headers)
 
-    return file_path, file_path2
+    return file_path
 
 
 if __name__ == "__main__":
     extract()
+
