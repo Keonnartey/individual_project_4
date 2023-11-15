@@ -44,7 +44,10 @@ def load(dataset="dbfs:/FileStore/databricks_project/top50MusicFrom2010-2019.csv
             # Upgrade Delta table protocol version if necessary
             if protocol_version != "2.5":
                 spark.sql(
-                    "ALTER TABLE top50MusicFrom2010_2019_delta SET TBLPROPERTIES ('delta.columnMapping.mode' = 'name', 'delta.minReaderVersion' = '2', 'delta.minWriterVersion' = '5')"
+                    "ALTER TABLE top50MusicFrom2010_2019_delta SET TBLPROPERTIES \
+                        ('delta.columnMapping.mode' = 'name', \
+                            'delta.minReaderVersion' = '2', \
+                            'delta.minWriterVersion' = '5')"
                 )
 
     num_rows = top50MusicFrom2010_2019_df.count()
