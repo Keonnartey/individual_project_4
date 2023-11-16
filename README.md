@@ -52,6 +52,11 @@ This Query checks for how many times famous Pop star Rihanna appears in the data
   
 ![histogram_plot](https://github.com/Keonnartey/databricks_project/assets/125210401/2583ad2b-30c0-4c04-8b51-4e6cc0fbdc6b)
 
+#### Databricks Pipeline and Jobs
+
+<img width="1280" alt="Screenshot 2023-11-15 at 7 27 44 PM" src="https://github.com/Keonnartey/databricks_project/assets/125210401/bd6ee0cb-d1eb-498d-8072-86008452825e">
+
+<img width="1440" alt="Screenshot 2023-11-15 at 11 02 29 PM" src="https://github.com/Keonnartey/databricks_project/assets/125210401/bc73db63-5248-46f7-a3e1-4a30d0d33f3b">
 
 
 #### References
