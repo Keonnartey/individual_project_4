@@ -1,5 +1,7 @@
 ## DataBricks ETL Pipeline [![CI](https://github.com/Keonnartey/databricks_project/actions/workflows/ci.yml/badge.svg)](https://github.com/Keonnartey/databricks_project/actions/workflows/ci.yml)
 
+### Youtube [link](https://youtu.be/w6INFIqV-28)
+
 
 ### Introduction
 This project develops a Databricks ETL(Extract, Transform, Load) Pipeline for retrieving and processing `Spotify Songs`, featuring a well-documented notebook for ETL operations, Delta Lake for storage, Spark SQL for transformations, and data visualizations for actionable insights.
