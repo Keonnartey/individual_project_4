@@ -7,6 +7,8 @@ from mylib.transform import load
 from mylib.query_viz import query_transform, simple_plot
 import os
 
+ma
+
 
 if __name__ == "__main__":
     current_directory = os.getcwd()
