@@ -5,7 +5,7 @@ test:
 	python -m pytest -vv --cov=main --cov=mylib test_*.py
 
 format:
-	black *.py mylib/*.py
+	black *.py mylib/*.ipynb 
 
 lint:
 	# Disable comment to test speed
