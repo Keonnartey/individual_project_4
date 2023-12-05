@@ -1,1 +1,0 @@
-SELECT * FROM top50musicfrom2010_2019_delta WHERE artist = "Rihanna"
