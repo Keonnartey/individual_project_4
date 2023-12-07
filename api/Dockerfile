@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.10
 RUN pip install --upgrade pip
 RUN pip install --upgrade scikit-learn
 
@@ -12,8 +12,7 @@ ADD . /app
 RUN pip3 install -r requirements.txt
 
 
-
-EXPOSE 50505
+EXPOSE 5000
 
 # Run app.py when the container launches
 

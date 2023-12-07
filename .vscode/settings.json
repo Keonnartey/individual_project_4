@@ -1,0 +1,5 @@
+{
+    "containerApps.deployWorkspaceProject.containerAppResourceGroupName": "pricep",
+    "containerApps.deployWorkspaceProject.containerAppName": "individualproject4",
+    "containerApps.deployWorkspaceProject.containerRegistryName": "individualproject478e9f0"
+}
