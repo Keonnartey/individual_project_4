@@ -26,15 +26,21 @@ Azure Configuration: Environment variables are utilized for sensitive informatio
 #### Preparation 
 
 1. Create a model Notebook and save into a pickle file which is then moved into the Flask app folder
-2. Create an App.py and run the model
-3. Create a DockerFile
-4. Create and build a Docker image
-5. Docker push the image to DockerHub and copy the image name with the tag
-6. On Azure Web App Service, create a resource group, choose DockerFile
-7. Add the Docker Image and the tag
-8. Deploy the web app
-9. Add the configuration Services
-10. Launch URL 
+2. Create an App.py and run the model   <img width="1440" alt="Screenshot 2023-12-07 at 11 25 33 AM" src="https://github.com/Keonnartey/individual_project_4/assets/125210401/49b0f737-9d38-47a1-ada9-965ffe0d9264">
+
+3. Create a DockerFile (docker build -t <`insert image name`:tag> . )
+4. Create and build a Docker image  <img width="1440" alt="Screenshot 2023-12-07 at 11 25 10 AM" src="https://github.com/Keonnartey/individual_project_4/assets/125210401/63389c84-c213-435f-84dd-03dea2fd2dcc">
+
+6. Docker push the image to DockerHub and copy the image name with the tag
+7. On Azure Web App Service, create a resource group, choose DockerFile    <img width="1440" alt="Screenshot 2023-12-07 at 11 28 01 AM" src="https://github.com/Keonnartey/individual_project_4/assets/125210401/3a4828b6-ef74-4be6-a86e-87d6b9ffe63a">
+
+8. Add the Docker Image and the tag   <img width="1440" alt="Screenshot 2023-12-07 at 11 28 32 AM" src="https://github.com/Keonnartey/individual_project_4/assets/125210401/199a65e6-5892-4583-b7b2-7a0ab6a87e4e">
+
+9. Deploy the web app  <img width="1440" alt="Screenshot 2023-12-07 at 11 26 57 AM" src="https://github.com/Keonnartey/individual_project_4/assets/125210401/ee6bc51c-3471-48d9-ad26-3b82b26ec37f">
+
+10. Add the configuration Services  <img width="1440" alt="Screenshot 2023-12-07 at 11 25 47 AM" src="https://github.com/Keonnartey/individual_project_4/assets/125210401/ad96b743-9fa3-4828-8026-350a5d611d24">
+
+11. Launch URL 
 
 
 #### GitHub Action
