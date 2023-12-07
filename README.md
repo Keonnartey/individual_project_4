@@ -1,6 +1,6 @@
 # Auto Scaling Flask App Using Azure Container Apps [![CI](https://github.com/Keonnartey/individual_project_4/actions/workflows/ci.yml/badge.svg)](https://github.com/Keonnartey/individual_project_4/actions/workflows/ci.yml)
 
-[Price Predictions](https://pricep.azurewebsites.net/)
+[Price Predictions](https://pricep.azurewebsites.net/) [Youtube link](https://www.youtube.com/watch?v=iGMaMm7xZX0&t=67s)
 
 #### Requirements
 
